@@ -181,7 +181,7 @@ class TokenController {
 			corpoDaResposta.put("mensagem", "Erro na aplicação.");
 			return new ResponseEntity<>(corpoDaResposta, HttpStatus.INTERNAL_SERVER_ERROR);
 		}
-}
+	}
 
 	@GetMapping("/validarToken")
 	public ResponseEntity<?> validarToken(
@@ -193,18 +193,16 @@ class TokenController {
 			Optional<Token> possivelToken = repositorio.findById(token_acesso);
 
 			/**
-			 * Uso do Optional e o isPresent:
-			 * https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html
-			 */
+			 * MÉTODO PARA IDENTIFICAR SE O TOKEN BUSCADO ESTÁ NO BANCO DE DADOS
+			 **/
 			if (possivelToken.isPresent()) {
 				Token token = possivelToken.get();
 				if (token.getSituacao().equals("Expirado") || token.getSituacao().equals("Utilizado")) {
 					return new ResponseEntity<>(corpoDaResposta, HttpStatus.MULTIPLE_CHOICES);
 				}
 				/**
-				 * Cálculo do tempo da Requisição.
-				 * https://www.ti-enxame.com/pt/date/como-calcular-diferenca-de-horario-entre-duas-datas-usando-localdatetime-em-java-8/833280341/
-				 */
+				 * CÁLCULO DO TEMPO DA REQUISIÇÃO.
+				 * */
 				LocalDateTime horaAtual = LocalDateTime.now();
 				LocalDateTime horaInicial = token.getData();
 				long tempoDecorrido = Duration.between(horaInicial, horaAtual).toMillis();
@@ -278,6 +276,10 @@ class TokenController {
 							repositorio.save(token);
 							return new ResponseEntity<>(corpoDaResposta, HttpStatus.MULTIPLE_CHOICES);
 						}
+						
+						if(token.getSituacao().equals("Utilizado")) {
+							return new ResponseEntity<>(corpoDaResposta, HttpStatus.MULTIPLE_CHOICES); 
+						}
 
 						if (token.getSituacao().equals("Expirado")) {
 							String novoToken = GeradorToken.gerarToken(128);
@@ -320,7 +322,7 @@ class TokenController {
 			Optional<Token> possivelToken = repositorio.findById(token_acesso);
 			Token token = possivelToken.get();
 			/**
-			 * Cálculo do tempo da Requisição.
+			 * CÁLCULO TEMPO DA REQUISIÇÃO
 			 * 
 			 */
 			LocalDateTime horaAtual = LocalDateTime.now();
