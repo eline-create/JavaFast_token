@@ -253,6 +253,8 @@ class TokenController {
 
 			boolean tokenValidacao = token_acesso.contains("Batedor ");
 
+			System.out.println(tokenValidacao);
+
 			String[] tokenAcesso = token_acesso.split("Batedor ");
 			if (tokenValidacao) {
 				Optional<Token> possivelToken = repositorio.findById(tokenAcesso[1]);
@@ -270,22 +272,22 @@ class TokenController {
 						LocalDateTime horaAtual = LocalDateTime.now();
 						LocalDateTime horaInicial = token.getData();
 						long tempoDecorrido = Duration.between(horaInicial, horaAtual).toMillis();
-
-						if (tempoDecorrido > token.getExpira()) {
-							token.setSituacao("Expirado");
-							repositorio.save(token);
-							return new ResponseEntity<>(corpoDaResposta, HttpStatus.MULTIPLE_CHOICES);
-						}
 						
+						System.out.println(token.getSituacao());
 						if(token.getSituacao().equals("Utilizado")) {
 							return new ResponseEntity<>(corpoDaResposta, HttpStatus.MULTIPLE_CHOICES); 
 						}
 
+						if (tempoDecorrido > token.getExpira()) {
+							token.setSituacao("Expirado");
+							repositorio.save(token);
+						}
+						
 						if (token.getSituacao().equals("Expirado")) {
 							String novoToken = GeradorToken.gerarToken(128);
 
 							token.setSituacao("Utilizado");
-							token.setTokenAcesso(novoToken);
+//							token.setTokenAcesso(novoToken);
 							repositorio.save(token);
 							/**
 							 * RESPONSE SOLICITADA PARA RETORNO
@@ -311,6 +313,8 @@ class TokenController {
 		return new ResponseEntity<>(corpoDaResposta, HttpStatus.OK);
 	}
 
+	
+	
 	@DeleteMapping("/excluirToken")
 	public ResponseEntity<?> excluirToken(
 			@RequestParam(value = "token_acesso", defaultValue = "0") String token_acesso) {
