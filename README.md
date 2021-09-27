@@ -18,6 +18,7 @@
 - [Maior desafio](#maior-desafio)
 - [Maior aprendizado](#maior-aprendizado)
 - [Possíveis mudanças](#possíveis-mudanças)
+- [O Case](#O-Case)
 - [Funcionalidades](#funcionalidades)
   - [Próximas features](#próximas-features)
   - [Como usar](#como-usar)
@@ -71,6 +72,9 @@
 > Quanto ao Case Gerenciamento, acreditamos que poderíamos ter um método de login para simular o consumo da API tanto pelo Cliente quanto pelo Servidor.
 > Por fim, devolver uma mensagem a cada resposta de solicitação, especificando o significado de cada uma.
 
+## O Case
+
+> Ver pdf: <a href="documentos/Gerenciador de Token.pdf">Case</a>
 
 ## Funcionalidades:
 
