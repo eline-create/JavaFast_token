@@ -123,7 +123,7 @@ Funcionalidade adicional:
 ## Agradecimentos:
 
 > Agradecemos a oportunidade de participar da Java Fast Academy. Aqui encontramos um ambiente seguro e confortável de aprendizado e desenvolvimento de nossas skills.
-> Nosso agradecimentos aos mentores que estavam presentes nas aulas, Artur Oliveira, Alisson Raniel, Douglas Santos, tirando dúvidas, ajudando com o entendimento dos cases e da linguagem.
+> Nosso agradecimentos aos mentores que estavam presentes nas aulas, Artur Oliveira, Alisson Raniel, Douglas de Araújo, tirando dúvidas, ajudando com o entendimento dos cases e da linguagem.
 > Agradecimento mais que especial ao nosso instrutor e facilitador, Samuel Bataglião  que conduziu as aulas com tranquilidade e paciência, pelas dicas e conhecimento, nossa gratidão.
 > Ao Francisco Sousa e ao Evandro Mirres, por acreditarem em nosso desenvolvimento de competências e aprendizado, que poderíamos seguir: Muita gratidão. 
 > Accenture Brasil, obrigada por proporcionar um caminho para muitos iniciantes ingressarem na carreira de tecnologia.

@@ -287,7 +287,7 @@ class TokenController {
 							String novoToken = GeradorToken.gerarToken(128);
 
 							token.setSituacao("Utilizado");
-//							token.setTokenAcesso(novoToken);
+						
 							repositorio.save(token);
 							/**
 							 * RESPONSE SOLICITADA PARA RETORNO
