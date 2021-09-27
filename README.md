@@ -96,7 +96,7 @@ Funcionalidade adicional:
 ### **Próximas features**:
 
 > Reafatorar o código e deixar o tratamento de erro em uma arquivo específico;
-> Um GET com validação para buscar todos os POSTs que estão no banco, mas mostrando um tratamento de erro, caso o banco esteja vazio.
+> Um GET com validação para buscar todos os POSTs que estão no banco, mas mostrando um tratamento de erro, caso o banco esteja vazio;
 > Retornar as mensagens referentes às responses de cada método.
 
 ### **Como usar**:
