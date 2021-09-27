@@ -67,9 +67,9 @@
 ## Possíveis mudanças
 
 > No que diz respeito ao desenvolvimento do projeto, teríamos nos concentrado em executar o case literalmente como estava escrito, sem imaginar outras funcionalidades. Pensar além, no nosso caso, atrapalhou nosso entendimento. 
-> Por outro lado, assim que focamos nosso olhar o traballho fluiu.
-> 
+> Por outro lado, assim que focamos nosso olhar para o trabalho fluiu.
 > Quanto ao Case Gerenciamento, acreditamos que poderíamos ter um método de login para simular o consumo da API tanto pelo Cliente quanto pelo Servidor.
+> Por fim, devolver uma mensagem a cada resposta de solicitação, especificando o significado de cada uma.
 
 
 ## Funcionalidades:
@@ -95,17 +95,17 @@ Funcionalidade adicional:
 
 ### **Próximas features**:
 
-> Reafatorar o código e deixar o tratamento de erro em uma arquivo específico;
-> Um GET com validação para buscar todos os POSTs que estão no banco, mas mostrando um tratamento de erro, caso o banco esteja vazio;
-> Retornar as mensagens referentes às responses de cada método.
+>1. Reafatorar o código e deixar o tratamento de erro em uma arquivo específico;
+>2. Inserir no GET All uma validação para mostrar uma mensagem, caso o banco esteja vazio;
+>3. Retornar as mensagens referentes às responses de cada método.
 
 ### **Como usar**:
 
 > Para usar o projeto, seguir os passos:
 >1. Abra a pasta do projeto CaseToken, em sua IDE de preferência. lembre-se que ao usar alguma diferente da utilizada, pode haver necessidade de instalar plugins para usar o Java;
 >2. Após abrir em sua IDE, só executar o servidor. Para este projeto colocamos a porta 8084 como default, mas para alterar basta acessar o pacote src/main/resources e reconfigurar o arquivo **application.properties**;
->3. Feito isso, abra o Postaman para teste das rotas. Os teste do funcionamento da API podem ser feitos pelo Postman ou qualquer aplicativo para testes de API.
->4. A seguir deixamos telas dos testes realizados e os principais retornos após as requisições.
+>3. Feito isso, abra o Postman para teste das rotas. Os teste do funcionamento da API podem ser feitos pelo Postman ou qualquer aplicativo para testes de API.
+
 
 ## Referências:
 
