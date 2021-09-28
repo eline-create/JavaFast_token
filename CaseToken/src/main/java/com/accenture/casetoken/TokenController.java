@@ -84,6 +84,7 @@ class TokenController {
 				corpoDaResposta.put("reativa_token", reativaToken);
 				corpoDaResposta.put("tipo", tipo);
 				corpoDaResposta.put("expira", Integer.toString(expira));
+				return new ResponseEntity<>(corpoDaResposta, HttpStatus.OK);
 			} else {
 				System.out.println("Credencial Invalida!" + validacao);
 			}
@@ -95,7 +96,7 @@ class TokenController {
 			return new ResponseEntity<>(corpoDaResposta, HttpStatus.INTERNAL_SERVER_ERROR);
 		}
 
-		return new ResponseEntity<>(corpoDaResposta, HttpStatus.OK);
+		return new ResponseEntity<>(corpoDaResposta, HttpStatus.BAD_REQUEST);
 
 	}
 

@@ -74,7 +74,8 @@
 
 ## O Case
 
-> Ver pdf: <a href="documentos/Gerenciador de Token.pdf">Case</a>
+> Ver pdf: [Case_Gerenciamento_Token](./documentos/CaseToken.pdf)
+
 
 ## Funcionalidades:
 
@@ -130,6 +131,7 @@ Funcionalidade adicional:
 > Nosso agradecimentos aos mentores que estavam presentes nas aulas, Artur Oliveira, Alisson Raniel, Douglas de Araújo, tirando dúvidas, ajudando com o entendimento dos cases e da linguagem.
 > Agradecimento mais que especial ao nosso instrutor e facilitador, Samuel Bataglião  que conduziu as aulas com tranquilidade e paciência, pelas dicas e conhecimento, nossa gratidão.
 > Ao Francisco Sousa e ao Evandro Mirres, por acreditarem em nosso desenvolvimento de competências e aprendizado, que poderíamos seguir: Muita gratidão. 
+> Ao Willian Seles pelo recrutamento perfeito, feedback antes e depois da seleção.
 > Accenture Brasil, obrigada por proporcionar um caminho para muitos iniciantes ingressarem na carreira de tecnologia.
 
 ---
